@@ -43,16 +43,16 @@ const handleSubmit = e => {
       console.log(res.data.results)
       setSearchMovies(res.data.results)
       history.push('/search')
-    }).catch(err => history.push("/"))
+    }).catch(err => history.push("/movie-app/"))
  
   } else {
-    history.push("/")
+    history.push("/movie-app/")
   }
 }
 
     return (
         <div className='navbar'>       
-            <Link to="/">
+            <Link to="/movie-app/">
               <MovieIcon className="logo"/>
               <h2>KMOVIE</h2>
             </Link>

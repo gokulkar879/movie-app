@@ -13,9 +13,9 @@ function App() {
      <Router>
        <Navbar />
        <Switch>
-          <Route exact path="/" component={Home}></Route>
-          <Route exact path="/search" component={Movies}></Route>
-          <Route path="/search/:id" component={SingleMovie}></Route>
+          <Route exact path="/movie-app/" component={Home}></Route>
+          <Route exact path="/movie-app/search" component={Movies}></Route>
+          <Route path="/movie-app/search/:id" component={SingleMovie}></Route>
        </Switch>
      </Router>
     </div>

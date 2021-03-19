@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom'
 function Movie({image, title, rating, id}) {
     console.log(id)
     return (
-        <Link to={`/search/${id}`}>
+        <Link to={`/movie-app/search/${id}`}>
         <div className="movie">
             <div className="img">
              <img src={`${imageURL}${image}`}></img>
