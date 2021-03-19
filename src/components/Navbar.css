@@ -1,0 +1,157 @@
+@import url('https://fonts.googleapis.com/css2?family=Akaya+Telivigala&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+.navbar{
+    
+    width: 100%;
+    min-height: 20%;
+    position: fixed;
+    top:0;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    transition: .3s;
+    z-index: 1000;
+    background: rgba(0,0,0,0.3);
+
+}
+.navbar a{
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    font-size: 1.9rem;
+    color: rgb(209, 156, 9);
+    font-family: 'Akaya Telivigala', cursive;
+    letter-spacing: .5rem;
+}
+.navbar a h2{
+    margin-left: 20%;
+}
+.navbar a .logo{
+    font-size: 3.9rem;
+}
+.navbar input{
+    font-size: 1.5rem;
+    letter-spacing: 3px;
+    padding: 10px;
+    outline: none;
+    border-radius: 5px;
+    border: 2px solid rgb(24, 16, 1);
+    color: rgb(39, 38, 38);
+}
+
+.navbar.active{
+    background: rgb(255, 250, 240);
+}
+.navbar__buttons{
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    height: 0;
+    transition: .3s;
+    display: none;
+}
+.navbar__buttons button{
+    font-family: 'Montserrat', sans-serif;
+    letter-spacing: 3px;
+    font-weight: bold;
+    height: 40px;
+    outline: none;
+    border: none;
+    font-weight: bold;
+    background: rgba(0,0,0,0.6);
+    color: white;
+    cursor: pointer;
+    transition: .3s;
+}
+.navbar__buttons button:hover{
+background: rgb(190, 157, 9);
+color: rgb(24, 13, 1);
+}
+.navbar__menu{
+width: 40px;
+height: 30px;
+position: absolute;
+top: 37px;
+right: 20px;
+display: flex;
+flex-direction: column;
+justify-content: space-between;
+display: none;
+
+transition: .3s;
+}
+.navbar__menu.show{
+  transform: rotate(90deg);
+}
+.navbar__menu div:nth-child(1) {
+    width: 100%;
+    height: 5px;
+    background: rgb(192, 143, 9);
+    border-radius: 10px;
+}
+.navbar__menu div:nth-child(2) {
+    width: 100%;
+    height: 5px;
+    background: rgb(192, 143, 9);
+    border-radius: 10px;
+}
+.navbar__menu div:nth-child(3) {
+    width: 100%;
+    height: 5px;
+    background: rgb(192, 143, 9);
+    border-radius: 10px;
+}
+.form{
+    display: none;
+    height:0;
+    overflow: hidden;
+    transition: .3s;
+}
+.form.show{
+    display: block;
+   height:100%;
+}
+.navbar__buttons.show{
+    height: 100%;
+display: flex;
+}
+@media only screen and (min-width: 601px) {
+    .navbar__buttons.show{
+        display: none;
+    }
+    .navbar__buttons{
+        display: none;
+    }
+    .form{
+        display: block;
+        height: 100%;
+    }
+}
+@media only screen and (max-width: 800px) {
+    .navbar a h2{
+        font-size: 1.9rem;
+        margin-left: 10%;
+    }
+    .navbar a .logo{
+        font-size: 3rem;
+    }
+}
+@media only screen and (max-width: 600px) {
+    .navbar{
+        flex-direction: column;
+        align-items:flex-start;
+    }
+    .navbar__menu{
+        display: flex;
+    }
+    .navbar input{
+        width: 100vw;
+    }
+    .navbar__buttons{
+        width: 100%;   
+
+        display: none;
+    }
+}
+

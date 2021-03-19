@@ -1,0 +1,62 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+.home{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 10%;
+}
+.home__center {
+    width: 90%;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
+    grid-column-gap: 15px;
+    grid-row-gap: 15px;
+    justify-items: center;
+}
+.footer{
+    height: 50px;
+}
+.home__buttons{
+    margin: 20px 0px;
+}
+.home__buttons button{
+    width: 120px;
+    height: 40px;
+    font-size: .9rem;
+    font-family: 'Montserrat', sans-serif;
+    letter-spacing: 1.2px;
+    font-weight: bold;
+    outline: none;
+    border: 1px solid rgb(221, 192, 24);
+    color: rgb(230, 214, 159);
+    background: transparent;
+}
+.home__buttons .active{
+    background: rgb(201, 157, 15);
+    color: rgb(37, 22, 2);
+}
+
+@media only screen and (max-width: 1200px) {
+    .home{
+        padding-top: 17%;
+    }
+}
+@media only screen and (max-width: 800px) {
+    .home{
+        padding-top: 23%;
+    }
+}
+@media only screen and (max-width: 600px) {
+    .home{
+        padding-top: 26%;
+    }
+    .home__buttons{
+        display: none;
+    }
+}
+@media only screen and (max-width: 500px) {
+    .home{
+        padding-top: 28%;
+    }
+}
