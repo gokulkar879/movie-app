@@ -10,12 +10,12 @@ function App() {
   return (
     
     <div className="app">
-     <Router>
+     <Router basename={process.env.PUBLIC_URL}>
        <Navbar />
        <Switch>
-          <Route exact path="/movie-app/" component={Home}></Route>
-          <Route exact path="/movie-app/search" component={Movies}></Route>
-          <Route path="/movie-app/search/:id" component={SingleMovie}></Route>
+          <Route exact path="/" component={Home}></Route>
+          <Route exact path="/search" component={Movies}></Route>
+          <Route path="/search/:id" component={SingleMovie}></Route>
        </Switch>
      </Router>
     </div>
