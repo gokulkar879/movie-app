@@ -10,7 +10,7 @@ function App() {
   return (
     
     <div className="app">
-     <Router basename={process.env.PUBLIC_URL}>
+     <Router basename="/movie-app/">
        <Navbar />
        <Switch>
           <Route exact path="/" component={Home}></Route>
